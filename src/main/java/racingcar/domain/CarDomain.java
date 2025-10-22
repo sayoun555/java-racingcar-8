@@ -17,4 +17,12 @@ public class CarDomain {
             carLocation.move();
         }
     }
+
+    public int carPosition() {
+        return carLocation.getPosition();
+    }
+
+    public String carName() {
+        return carNameDomain.getName();
+    }
 }
