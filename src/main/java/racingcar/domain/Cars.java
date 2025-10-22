@@ -6,7 +6,6 @@ import java.util.List;
 public class Cars {
     private final List<CarDomain> carDomain;
 
-
     public Cars(List<CarDomain> carDomainList) {
         this.carDomain = carDomainList;
     }

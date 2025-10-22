@@ -2,15 +2,14 @@ package racingcar.service;
 
 import racingcar.domain.CarLocation;
 import racingcar.domain.CarNameDomain;
+import racingcar.domain.Cars;
 
 public class RacingcarServiceImpl implements  RacingcarService{
-    private final CarLocation carLocation;
-    private final CarNameDomain carNameDomain;
-    private final
+    private final Cars cars;
 
     public RacingcarServiceImpl() {
-        this.carLocation = new CarLocation();
-        this.carNameDomain =  new CarNameDomain(name);
+        this.cars = cars;
     }
 
+    public
 }
