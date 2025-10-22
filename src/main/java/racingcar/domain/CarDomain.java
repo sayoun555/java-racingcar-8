@@ -1,5 +1,7 @@
 package racingcar.domain;
 
 public class CarDomain {
-    private final String
+    private final CarNameDomain carNameDomain;
+
+    public CarDomain
 }
