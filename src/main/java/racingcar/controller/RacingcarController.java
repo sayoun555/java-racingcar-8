@@ -18,7 +18,7 @@ public class RacingcarController {
     }
 
     public void run() {
-        String nameInput = inputView.nameInput();
+        String nameInput = String.valueOf(inputView.nameInput());
         String nuberInput = inputView.numberInput();
         String result = racingcarService();
         outputView.resultView();

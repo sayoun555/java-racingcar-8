@@ -4,7 +4,7 @@ public class CarNameDomain {
     private final String name;
 
     public CarNameDomain(String name) {
-        if (name.length() < 5) {
+        if (name.length() > 5) {
             throw new IllegalArgumentException();
         }
         this.name = name;
