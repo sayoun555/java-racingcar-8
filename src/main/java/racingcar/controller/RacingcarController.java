@@ -5,6 +5,8 @@ import racingcar.service.RacingcarServiceImpl;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
+import java.util.List;
+
 public class RacingcarController {
     private final RacingcarService racingcarService;
     private final InputView inputView;
@@ -18,9 +20,8 @@ public class RacingcarController {
     }
 
     public void run() {
-        String nameInput = String.valueOf(inputView.nameInput());
-        String nuberInput = inputView.numberInput();
-        String result = racingcarService();
-        outputView.resultView();
+        int number = Integer.parseInt(inputView.numberInput());
+        List<String> result = racingcarService.Racingcar(inputView.nameInput(), number);
+        outputView.resultView(result);
     }
 }

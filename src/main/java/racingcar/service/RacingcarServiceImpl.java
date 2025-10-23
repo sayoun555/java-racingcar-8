@@ -14,8 +14,7 @@ public class RacingcarServiceImpl implements  RacingcarService{
 
     public List<String> Racingcar(List<String> inputName, int number) {
         List<CarDomain> carNames = new ArrayList<>();
-        for (int i = 0; i < inputName.size(); i++) {
-            String name = inputName.get(i);
+        for (String name : inputName) {
             CarNameDomain carNameDomain = new CarNameDomain(name);
             CarDomain carDomain = new CarDomain(carNameDomain);
             carNames.add(carDomain);
