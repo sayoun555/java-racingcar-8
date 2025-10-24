@@ -1,9 +1,10 @@
 package racingcar.service;
 
 import racingcar.domain.CarDomain;
+import racingcar.domain.Cars;
 
 import java.util.List;
 
 public interface RacingcarService {
-    List<String> Racingcar(List<String> inputName, int number);
+    Cars Racingcar(List<String> inputName, int number);
 }

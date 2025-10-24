@@ -1,5 +1,7 @@
 package racingcar.controller;
 
+import racingcar.domain.CarMoveCount;
+import racingcar.domain.Cars;
 import racingcar.service.RacingcarService;
 import racingcar.service.RacingcarServiceImpl;
 import racingcar.view.InputView;
@@ -21,7 +23,8 @@ public class RacingcarController {
 
     public void run() {
         int number = Integer.parseInt(inputView.numberInput());
-        List<String> result = racingcarService.Racingcar(inputView.nameInput(), number);
-        outputView.resultView(result);
+        Cars result = racingcarService.Racingcar(inputView.nameInput(), number);
+        outputView.roundCarsView(result);
+        outputView.resultView(result.vitoryCar());
     }
 }

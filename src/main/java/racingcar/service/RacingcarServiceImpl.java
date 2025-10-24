@@ -12,7 +12,7 @@ public class RacingcarServiceImpl implements  RacingcarService{
     public RacingcarServiceImpl() {
     }
 
-    public List<String> Racingcar(List<String> inputName, int number) {
+    public Cars Racingcar(List<String> inputName, int number) {
         List<CarDomain> carNames = new ArrayList<>();
         for (String name : inputName) {
             CarNameDomain carNameDomain = new CarNameDomain(name);
@@ -23,6 +23,6 @@ public class RacingcarServiceImpl implements  RacingcarService{
         for (int i = 0; i < number; i++){
             cars.moveAll();
         }
-        return cars.vitoryCar();
+        return cars;
     }
 }

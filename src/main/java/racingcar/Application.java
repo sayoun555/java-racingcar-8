@@ -1,5 +1,8 @@
 package racingcar;
 
+import racingcar.controller.RacingcarController;
+import racingcar.service.RacingcarService;
+import racingcar.service.RacingcarServiceImpl;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
@@ -8,6 +11,9 @@ public class Application {
         try {
             InputView inputVeiw = new InputView();
             OutputView outputVeiw = new OutputView();
+            RacingcarServiceImpl racingcarService = new RacingcarServiceImpl();
+            RacingcarController racingcarController = new RacingcarController(racingcarService, inputVeiw, outputVeiw);
+            racingcarController.run();
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             throw e;
