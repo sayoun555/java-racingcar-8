@@ -32,4 +32,8 @@ public class Cars {
         }
         return carName;
     }
+
+    public List<CarDomain> getCarDomain() {
+        return carDomain;
+    }
 }
