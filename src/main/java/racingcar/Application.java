@@ -11,7 +11,7 @@ public class Application {
         try {
             InputView inputView = new InputView();
             OutputView outputView = new OutputView();
-            RacingcarServiceImpl racingcarService = new RacingcarServiceImpl();
+            RacingcarService racingcarService = new RacingcarServiceImpl();
             RacingcarController racingcarController = new RacingcarController(racingcarService, inputView, outputView);
             racingcarController.run();
         } catch (IllegalArgumentException e) {
