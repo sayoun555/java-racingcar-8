@@ -1,11 +1,10 @@
 package racingcar.domain;
 
-import java.util.Random;
+import camp.nextstep.edu.missionutils.Randoms;
 
 public class RandomNumber {
-    private final Random random = new Random();
 
     public int moveNumber() {
-        return random.nextInt(10);
+        return Randoms.pickNumberInRange(0, 9);
     }
 }
