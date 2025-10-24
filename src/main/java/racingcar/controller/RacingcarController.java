@@ -7,8 +7,6 @@ import racingcar.service.RacingcarServiceImpl;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
-import java.util.List;
-
 public class RacingcarController {
     private final RacingcarService racingcarService;
     private final InputView inputView;
@@ -23,7 +21,8 @@ public class RacingcarController {
 
     public void run() {
         int number = Integer.parseInt(inputView.numberInput());
-        Cars result = racingcarService.Racingcar(inputView.nameInput(), number);
+        CarMoveCount carMoveCount = new CarMoveCount(number);
+        Cars result = racingcarService.Racingcar(inputView.nameInput(), carMoveCount.getMoveCount());
         outputView.roundCarsView(result);
         outputView.resultView(result.vitoryCar());
     }

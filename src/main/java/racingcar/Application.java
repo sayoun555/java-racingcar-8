@@ -9,10 +9,10 @@ import racingcar.view.OutputView;
 public class Application {
     public static void main(String[] args) {
         try {
-            InputView inputVeiw = new InputView();
-            OutputView outputVeiw = new OutputView();
+            InputView inputView = new InputView();
+            OutputView outputView = new OutputView();
             RacingcarServiceImpl racingcarService = new RacingcarServiceImpl();
-            RacingcarController racingcarController = new RacingcarController(racingcarService, inputVeiw, outputVeiw);
+            RacingcarController racingcarController = new RacingcarController(racingcarService, inputView, outputView);
             racingcarController.run();
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
