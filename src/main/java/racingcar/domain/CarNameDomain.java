@@ -2,10 +2,11 @@ package racingcar.domain;
 
 public class CarNameDomain {
     private final String name;
+    private final String ERROR_NAME_MESSAGE = "이름이 너무 깁니다.";
 
     public CarNameDomain(String name) {
         if (name.length() > 5) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(ERROR_NAME_MESSAGE);
         }
         this.name = name;
     }
