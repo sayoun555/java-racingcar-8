@@ -9,9 +9,6 @@ import java.util.List;
 
 public class RacingcarServiceImpl implements  RacingcarService{
 
-    public RacingcarServiceImpl() {
-    }
-
     public Cars Racingcar(List<String> inputName, int number) {
         List<CarDomain> carNames = new ArrayList<>();
         for (String name : inputName) {
