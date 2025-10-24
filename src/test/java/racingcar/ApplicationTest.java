@@ -31,21 +31,13 @@ class ApplicationTest extends NsTest {
         );
     }
 
-//    @Test
-//    void 잘못_된_입력값() {
-//        assertSimpleTest(()->
-//                assertThatThrownBy(() -> runException(""))
-//                        .isInstanceOf(IllegalArgumentException.class)
-//        );
-//    }
-//
-//    @Test
-//    void 잘못_된_수() {
-//        assertThatThrownBy(() ->
-//                assertThatThrownBy(()-> runException("?"))
-//                        .isInstanceOf(IllegalArgumentException.class)
-//        );
-//    }
+    @Test
+    void 잘못_된_입력값() {
+        assertSimpleTest(()->
+                assertThatThrownBy(() -> runException("", "2"))
+                        .isInstanceOf(IllegalArgumentException.class)
+        );
+    }
 
     @Override
     public void runMain() {

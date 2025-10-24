@@ -16,7 +16,7 @@ public class Cars {
         }
     }
 
-    public List<String> vitoryCar() {
+    public List<String> victoryCar() {
         int bigCar = 0;
         List<String> carName = new ArrayList<>();
         for (CarDomain car : carDomain) {
