@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarFactory {
-    public Cars factory(List<String> inputName) {
+    public Cars carCreative(List<String> inputName) {
         List<CarDomain> carDomains = new ArrayList<>();
         for (String name : inputName) {
             CarNameDomain carNameDomain = new CarNameDomain(name);

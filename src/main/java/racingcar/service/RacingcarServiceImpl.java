@@ -9,7 +9,7 @@ public class RacingcarServiceImpl implements RacingcarService {
 
     public Cars Racingcar(List<String> inputName, int number) {
         CarFactory carFactory = new CarFactory();
-        Cars cars = carFactory.factory(inputName);
+        Cars cars = carFactory.carCreative(inputName);
         for (int i = 0; i < number; i++) {
             cars.moveAll();
         }

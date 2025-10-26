@@ -68,7 +68,7 @@ class ApplicationTest extends NsTest {
     @Test
     void 자동차_공장_테스트() {
         CarFactory carFactory = new CarFactory();
-        Cars cars = carFactory.factory(List.of("pobi", "youn", "wo"));
+        Cars cars = carFactory.carCreative(List.of("pobi", "youn", "wo"));
         assertThat(cars).isNotNull();
     }
 
