@@ -3,10 +3,10 @@ package racingcar.domain;
 import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
-    private final CarNameDomain carNameDomain;
+    private final CarName carNameDomain;
     int position = 0;
 
-    public Car(CarNameDomain carNameDomain) {
+    public Car(CarName carNameDomain) {
         this.carNameDomain = carNameDomain;
     }
 
@@ -19,6 +19,7 @@ public class Car {
             position++;
         }
     }
+
     public int getPosition() {
         return position;
     }
