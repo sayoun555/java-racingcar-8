@@ -16,21 +16,30 @@ public class Cars {
         }
     }
 
-    public List<String> victoryCar() {
+    public int isSamePosition() {
         int bigCar = 0;
-        List<String> carName = new ArrayList<>();
         for (Car car : car) {
             int carsPosition = car.getPosition();
             if (bigCar < carsPosition) {
                 bigCar = carsPosition;
             }
         }
+        return bigCar;
+    }
+
+    public List<String> victoryCar(int bigCar) {
+        List<String> carName = new ArrayList<>();
         for (Car carBigNumber : car) {
             if (carBigNumber.getPosition() == bigCar) {
                 carName.add(carBigNumber.carName());
             }
         }
         return carName;
+    }
+
+    public List<String> findwin() {
+        int maxPosition = isSamePosition();
+        return victoryCar(maxPosition);
     }
 
     public List<Car> getCar() {

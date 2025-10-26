@@ -3,11 +3,11 @@ package racingcar.domain;
 import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
-    private final CarName carNameDomain;
+    private final CarName carName;
     int position = 0;
 
     public Car(CarName carNameDomain) {
-        this.carNameDomain = carNameDomain;
+        this.carName = carNameDomain;
     }
 
     public boolean shouldMove() {
@@ -25,6 +25,6 @@ public class Car {
     }
 
     public String carName() {
-        return carNameDomain.getName();
+        return carName.getName();
     }
 }
