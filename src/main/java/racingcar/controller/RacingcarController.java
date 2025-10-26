@@ -25,6 +25,6 @@ public class RacingcarController {
         CarMoveCount carMoveCount = new CarMoveCount(number);
         Cars result = racingcarService.Racingcar(name, carMoveCount.getMoveCount());
         outputView.roundCarsView(result);
-        outputView.resultView(result.findwin());
+        outputView.resultView(result.victoryCar());
     }
 }

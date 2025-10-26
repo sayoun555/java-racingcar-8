@@ -10,36 +10,36 @@ public class Cars {
         this.car = carDomainList;
     }
 
-    public void moveAll() {
-        for (Car car : car) {
-            car.move();
-        }
-    }
-
-    public int isSamePosition() {
-        int bigCar = 0;
+    private int findMaxPosition() {
+        int maxPosition = 0;
         for (Car car : car) {
             int carsPosition = car.getPosition();
-            if (bigCar < carsPosition) {
-                bigCar = carsPosition;
+            if (maxPosition < carsPosition) {
+                maxPosition = carsPosition;
             }
         }
-        return bigCar;
+        return maxPosition;
     }
 
-    public List<String> victoryCar(int bigCar) {
+    private List<String> findWinCarNames(int maxPosition) {
         List<String> carName = new ArrayList<>();
         for (Car carBigNumber : car) {
-            if (carBigNumber.getPosition() == bigCar) {
+            if (carBigNumber.getPosition() == maxPosition) {
                 carName.add(carBigNumber.carName());
             }
         }
         return carName;
     }
 
-    public List<String> findwin() {
-        int maxPosition = isSamePosition();
-        return victoryCar(maxPosition);
+    public List<String> victoryCar() {
+        int maxPosition = findMaxPosition();
+        return findWinCarNames(maxPosition);
+    }
+
+    public void moveAll() {
+        for (Car car : car) {
+            car.move();
+        }
     }
 
     public List<Car> getCar() {
