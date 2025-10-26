@@ -13,8 +13,7 @@ public class RacingcarController {
     private final InputView inputView;
     private final OutputView outputView;
 
-    public RacingcarController (RacingcarService racingcarService, InputView inputView, OutputView outputView)
-    {
+    public RacingcarController(RacingcarService racingcarService, InputView inputView, OutputView outputView) {
         this.racingcarService = racingcarService;
         this.inputView = inputView;
         this.outputView = outputView;
