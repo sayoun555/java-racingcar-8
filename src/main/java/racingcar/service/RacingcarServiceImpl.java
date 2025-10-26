@@ -3,6 +3,7 @@ package racingcar.service;
 import racingcar.domain.CarDomain;
 import racingcar.domain.CarNameDomain;
 import racingcar.domain.Cars;
+import racingcar.factory.CarFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +11,8 @@ import java.util.List;
 public class RacingcarServiceImpl implements  RacingcarService{
 
     public Cars Racingcar(List<String> inputName, int number) {
-        List<CarDomain> carNames = new ArrayList<>();
-        for (String name : inputName) {
-            CarNameDomain carNameDomain = new CarNameDomain(name);
-            CarDomain carDomain = new CarDomain(carNameDomain);
-            carNames.add(carDomain);
-        }
-        Cars cars = new Cars(carNames);
+        CarFactory carFactory = new CarFactory();
+        Cars cars = carFactory.factory(inputName);
         for (int i = 0; i < number; i++){
             cars.moveAll();
         }
