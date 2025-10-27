@@ -1,6 +1,8 @@
 package racingcar.service;
 
+import racingcar.domain.CarMoveCount;
 import racingcar.domain.Cars;
+import racingcar.domain.RacingGame;
 import racingcar.factory.CarFactory;
 
 import java.util.List;
@@ -12,11 +14,9 @@ public class RacingcarServiceImpl implements RacingcarService {
         this.carFactory = carFactory;
     }
 
-    public Cars raceStarts(List<String> inputName, int number) {
+    public RacingGame raceStarts(List<String> inputName, int number) {
         Cars cars = carFactory.carCreative(inputName);
-        for (int i = 0; i < number; i++) {
-            cars.moveAll();
-        }
-        return cars;
+        CarMoveCount carMoveCount = new CarMoveCount(number);
+        return new RacingGame(cars, carMoveCount);
     }
 }

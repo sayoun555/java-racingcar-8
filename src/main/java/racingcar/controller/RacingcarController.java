@@ -2,6 +2,7 @@ package racingcar.controller;
 
 import racingcar.domain.CarMoveCount;
 import racingcar.domain.Cars;
+import racingcar.domain.RacingGame;
 import racingcar.service.RacingcarService;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
@@ -19,12 +20,20 @@ public class RacingcarController {
         this.outputView = outputView;
     }
 
+    private void racingResult(RacingGame result) {
+        for (int i = 0; i < result.getMoveCount(); i++) {
+            result.playRound();
+            outputView.roundCarsView(result.getCars());
+            outputView.emptyLine();
+        }
+    }
+
     public void run() {
         List<String> name = inputView.nameInput();
         int number = Integer.parseInt(inputView.numberInput());
-        CarMoveCount carMoveCount = new CarMoveCount(number);
-        Cars result = racingcarService.raceStarts(name, carMoveCount.getMoveCount());
-        outputView.roundCarsView(result);
-        outputView.resultView(result.victoryCar());
+        RacingGame game = racingcarService.raceStarts(name, number);
+        outputView.startMessage();
+        racingResult(game);
+        outputView.resultView(game.getCars().victoryCar());
     }
 }
