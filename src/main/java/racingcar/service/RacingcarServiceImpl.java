@@ -6,9 +6,13 @@ import racingcar.factory.CarFactory;
 import java.util.List;
 
 public class RacingcarServiceImpl implements RacingcarService {
+    private final CarFactory carFactory;
 
-    public Cars Racingcar(List<String> inputName, int number) {
-        CarFactory carFactory = new CarFactory();
+    public RacingcarServiceImpl(CarFactory carFactory) {
+        this.carFactory = carFactory;
+    }
+
+    public Cars raceStarts(List<String> inputName, int number) {
         Cars cars = carFactory.carCreative(inputName);
         for (int i = 0; i < number; i++) {
             cars.moveAll();

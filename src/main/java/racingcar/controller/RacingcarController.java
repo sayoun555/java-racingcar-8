@@ -23,7 +23,7 @@ public class RacingcarController {
         List<String> name = inputView.nameInput();
         int number = Integer.parseInt(inputView.numberInput());
         CarMoveCount carMoveCount = new CarMoveCount(number);
-        Cars result = racingcarService.Racingcar(name, carMoveCount.getMoveCount());
+        Cars result = racingcarService.raceStarts(name, carMoveCount.getMoveCount());
         outputView.roundCarsView(result);
         outputView.resultView(result.victoryCar());
     }

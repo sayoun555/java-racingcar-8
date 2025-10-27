@@ -10,7 +10,7 @@ public class Car {
         this.carName = carNameDomain;
     }
 
-    public boolean shouldMove() {
+    private boolean shouldMove() {
         return Randoms.pickNumberInRange(0, 9) >= 4;
     }
 
