@@ -1,7 +1,5 @@
 package racingcar.controller;
 
-import racingcar.domain.CarMoveCount;
-import racingcar.domain.Cars;
 import racingcar.domain.RacingGame;
 import racingcar.service.RacingcarService;
 import racingcar.view.InputView;
