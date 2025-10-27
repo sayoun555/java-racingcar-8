@@ -23,9 +23,9 @@ public class Cars {
 
     private List<String> findWinCarNames(int maxPosition) {
         List<String> carName = new ArrayList<>();
-        for (Car carBigNumber : car) {
-            if (carBigNumber.getPosition() == maxPosition) {
-                carName.add(carBigNumber.carName());
+        for (Car car : car) {
+            if (car.getPosition() == maxPosition) {
+                carName.add(car.carName());
             }
         }
         return carName;
