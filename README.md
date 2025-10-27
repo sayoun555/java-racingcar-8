@@ -17,6 +17,8 @@
 - [x] 우승자 판별 기능
 - [x] 이동 횟수 0과 음수 예외처리
 - [x] 자동차 이름 길이 예외처리
+- [x] 게임 도메인 추가
+- [x] 매 라운드 출력 기능
 
 ## 리팩터링 목록
 - [x] 조립 로직 클래스로 분리
@@ -41,12 +43,13 @@ racingcar
 │   └── RacingcarController.java  # 전체 흐름 제어
 ├── service
 │   ├── RacingcarService.java     # 인터페이스
-│   └── RacingcarServiceImpl.java # 비즈니스 로직 (경주 진행)
+│   └── RacingcarServiceImpl.java # 비즈니스 로직 (게임 생성)
 ├── domain
 │   ├── Car.java                  # 자동차 개체
 │   ├── Cars.java                 # 자동차 목록 관리
 │   ├── CarName.java              # 자동차 이름 (검증)
-│   └── CarMoveCount.java         # 이동 횟수 (검증)
+│   ├── CarMoveCount.java         # 이동 횟수 (검증)
+│   └── RacingGame.java           # 경주 게임 (라운드 관리)
 ├── factory
 │   └── CarFactory.java           # 자동차 생성
 └── view
