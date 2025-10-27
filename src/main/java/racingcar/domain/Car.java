@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
     private final CarName carName;
-    int position = 0;
+    private int position = 0;
 
     public Car(CarName carNameDomain) {
         this.carName = carNameDomain;
